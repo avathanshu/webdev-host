@@ -134,6 +134,18 @@ app.post('/api/driver/:driverID/complete', (req, res) => {
   res.json({ status: 'success' });
 });
 
+// ── Cancel ─────────────────────────────────────────────────────────────────
+app.post('/api/cancel', (req, res) => {
+  const { brn } = req.body;
+  const db = readDB();
+  const booking = db.bookings.find(b => b.booking_ref === brn);
+  if (!booking) return res.json({ status: 'error', message: 'Booking not found.' });
+  if (booking.status !== 'unassigned') return res.json({ status: 'error', message: `Cannot cancel a ${booking.status} booking.` });
+  booking.status = 'cancelled';
+  writeDB(db);
+  res.json({ status: 'success' });
+});
+
 // ── Tracking ───────────────────────────────────────────────────────────────
 app.get('/api/track/:brn', (req, res) => {
   const db = readDB();

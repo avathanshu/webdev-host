@@ -5,6 +5,8 @@ import BookingPage from './pages/BookingPage.jsx';
 import AdminPage from './pages/AdminPage.jsx';
 import TrackPage from './pages/TrackPage.jsx';
 import DriverPage from './pages/DriverPage.jsx';
+import CancelPage from './pages/CancelPage.jsx';
+import DashboardPage from './pages/DashboardPage.jsx';
 
 function Header() {
   return (
@@ -30,6 +32,8 @@ function Header() {
           {[
             { to: '/', label: 'Book' },
             { to: '/track', label: 'Track' },
+            { to: '/cancel', label: 'Cancel' },
+            { to: '/dashboard', label: 'Dashboard' },
             { to: '/admin', label: 'Admin' },
             { to: '/driver', label: 'Driver' },
           ].map(({ to, label }) => (
@@ -60,6 +64,8 @@ export default function App() {
       <Routes>
         <Route path="/" element={<BookingPage />} />
         <Route path="/track" element={<TrackPage />} />
+        <Route path="/cancel" element={<CancelPage />} />
+        <Route path="/dashboard" element={<DashboardPage />} />
         <Route path="/admin" element={<AdminPage />} />
         <Route path="/driver" element={<DriverPage />} />
       </Routes>
