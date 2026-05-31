@@ -1,0 +1,50 @@
+{
+  "bookings": [
+    {
+      "booking_ref": "BRN00001",
+      "cname": "Avathanshu Bhat",
+      "phone": "2322796312",
+      "unumber": "",
+      "snumber": "22",
+      "stname": "250 52 street",
+      "sbname": "",
+      "dsbname": "",
+      "pickup_date": "31/05/2026",
+      "pickup_time": "15:51",
+      "booking_datetime": "2026-05-31T01:52:59.156Z",
+      "status": "completed",
+      "driver_id": "DRV001",
+      "driver_name": "James Taufa"
+    }
+  ],
+  "drivers": [
+    {
+      "driver_id": "DRV001",
+      "name": "James Taufa",
+      "vehicle": "Toyota Camry",
+      "plate": "ABC123",
+      "status": "available"
+    },
+    {
+      "driver_id": "DRV002",
+      "name": "Priya Sharma",
+      "vehicle": "Honda Accord",
+      "plate": "DEF456",
+      "status": "available"
+    },
+    {
+      "driver_id": "DRV003",
+      "name": "Mark Chen",
+      "vehicle": "Ford Mondeo",
+      "plate": "GHI789",
+      "status": "available"
+    },
+    {
+      "driver_id": "DRV004",
+      "name": "Aotea Williams",
+      "vehicle": "Hyundai Sonata",
+      "plate": "JKL012",
+      "status": "available"
+    }
+  ]
+}

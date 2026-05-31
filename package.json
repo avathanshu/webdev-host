@@ -1,0 +1,14 @@
+{
+  "name": "cabsonline",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "install:all": "npm install && cd client && npm install",
+    "dev": "node server/index.js",
+    "start": "node server/index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^4.22.2"
+  }
+}
